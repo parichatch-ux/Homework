@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWS Volunteers VOL.4 - รายการสิ่งของบริจาค</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+    <!-- Hero Banner Section -->
+    <header class="bg-gradient-to-br from-indigo-600 via-indigo-700 to-violet-800 text-white py-16 px-4 text-center shadow-lg relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-white/10 to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="bg-amber-400 text-slate-950 text-xs md:text-sm font-bold uppercase px-4 py-1.5 rounded-full tracking-wider shadow-sm">
+                เปิดรับบริจาคสิ่งของ
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-3 tracking-tight">SWS Volunteers VOL.4</h1>
+            <p class="text-indigo-100 text-sm md:text-lg font-light max-w-2xl mx-auto">
+                ค่ายอาสาพัฒนาชุมชนและมอบทุนการศึกษาแก่นักเรียน โรงเรียนไทยสามัคคี อ.วังน้ำเขียว
+            </p>
+            <div class="mt-6 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg text-xs md:text-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>ระยะเวลา: วันนี้ - <strong class="text-amber-300 font-semibold">3 สิงหาคม 2569</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 py-10">
+
+        <!-- Section 1: รายการสิ่งของ -->
+        <section class="mb-14">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">📦 รายการวัสดุอุปกรณ์ที่ต้องการรับบริจาค</h2>
+                <p class="text-slate-500 text-sm mt-2">คลิกเลือกหมวดหมู่ที่ต้องการตรวจสอบจำนวนสิ่งของ</p>
+            </div>
+
+            <!-- Categories Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterCategory('all')" class="category-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm bg-indigo-600 text-white">ทั้งหมด</button>
+                <button onclick="filterCategory('กีฬา')" class="category-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600">⚽ กีฬา</button>
+                <button onclick="filterCategory('การเรียน')" class="category-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600">📚 การเรียน & ศิลปะ</button>
+                <button onclick="filterCategory('ปรับปรุง')" class="category-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600">🎨 สี & งานปรับปรุงอาคาร</button>
+                <button onclick="filterCategory('ความสะอาด')" class="category-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600">🧹 ทำความสะอาด & ยา</button>
+                <button onclick="filterCategory('เกษตร')" class="category-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm bg-white text-slate-600 border border-slate-200 hover:bg-indigo-50 hover:text-indigo-600">🐔 เกษตร & อื่นๆ</button>
+            </div>
+
+            <!-- Grid Items (สอดคล้องกับ Google Sheets จริงทั้งหมด) -->
+            <div id="items-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- === หมวดหมู่กีฬา === -->
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="กีฬา">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">⚽</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-medium">กีฬา</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ลูกฟุตบอล / ลูกฟุตซอล</h3>
+                        <p class="text-slate-500 text-xs mt-2">ตามความต้องการของโรงเรียนไทยสามัคคี สำหรับส่งมอบให้โรงเรียนบ้านทำนบพัฒนา</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">อย่างละ 5 ลูก</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="กีฬา">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🏐</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-medium">กีฬา</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ลูกวอลเลย์บอล / วอลเลย์บอลชายหาด</h3>
+                        <p class="text-slate-500 text-xs mt-2">อุปกรณ์กีฬาหลักเพื่อเสริมสร้างทักษะและพละกำลัง</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">อย่างละ 5 ลูก</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="กีฬา">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🥅</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-medium">กีฬา</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ตาข่ายวอลเลย์บอล / ตาข่ายตะกร้อ</h3>
+                        <p class="text-slate-500 text-xs mt-2">ตาข่ายสนามสำหรับใช้กั้นแบ่งแดนเวลาเล่นกีฬา</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">อย่างละ 1 ชุด</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="กีฬา">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🏸</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-medium">กีฬา</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ลูกเปตอง / ลูกตะกร้อ</h3>
+                        <p class="text-slate-500 text-xs mt-2">ชุดลูกเปตอง และลูกเซปักตะกร้อสำหรับฝึกซ้อม</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">เปตอง 2 ชุด / ตะกร้อ 5 ลูก</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="กีฬา">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🏓</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-medium">กีฬา</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">อุปกรณ์เทเบิลเทนนิส (ปิงปอง)</h3>
+                        <p class="text-slate-500 text-xs mt-2">ประกอบไปด้วยโต๊ะปิงปอง ไม้ตีปิงปอง และลูกปิงปอง</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">โต๊ะ 1 ชุด / ไม้-ลูก ไม่จำกัด</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="กีฬา">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">⚠️</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-medium">กีฬา</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ชุดกรวยฝึกซ้อมกีฬา</h3>
+                        <p class="text-slate-500 text-xs mt-2">สำหรับจัดฐานกิจกรรมและนำมาฝึกซ้อมทักษะการเคลื่อนไหว</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">3 ชุด</span></div>
+                </div>
+
+                <!-- === หมวดหมู่การเรียนและศิลปะ === -->
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="การเรียน">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">📚</span><span class="bg-purple-100 text-purple-800 text-xs px-2 py-0.5 rounded font-medium">การเรียน</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">หนังสืออ่านทั่วไป (ระดับมัธยมศึกษา)</h3>
+                        <p class="text-slate-500 text-xs mt-2">หนังสืออ่านนอกเวลา หนังสือความรู้รอบตัว วรรณกรรมเยาวชน สารคดี</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-emerald-600">ไม่จำกัดจำนวน</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="การเรียน">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🎨</span><span class="bg-purple-100 text-purple-800 text-xs px-2 py-0.5 rounded font-medium">ศิลปะ</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">อุปกรณ์ศิลปะระบายสี</h3>
+                        <p class="text-slate-500 text-xs mt-2">สีไม้, สีน้ำ, สีชอล์ก, พู่กันระบายสี และจานสีรองผสมสี</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-emerald-600">ไม่จำกัดจำนวน</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="การเรียน">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">📄</span><span class="bg-purple-100 text-purple-800 text-xs px-2 py-0.5 rounded font-medium">การเรียน</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">กระดาษ A4 สำหรับถ่ายเอกสาร</h3>
+                        <p class="text-slate-500 text-xs mt-2">กระดาษขาวเพื่อส่งมอบใช้ประโยชน์ในงานเอกสารและการศึกษาของโรงเรียน</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-emerald-600">ไม่จำกัดจำนวน</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="การเรียน">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🧠</span><span class="bg-purple-100 text-purple-800 text-xs px-2 py-0.5 rounded font-medium">การเรียน</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">บอร์ดเกมคำคม & Crosswords</h3>
+                        <p class="text-slate-500 text-xs mt-2">เกมต่ออักษรคำคมภาษาไทย และกระดานต่อคำศัพท์ภาษาอังกฤษ Crosswords</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">อย่างละ 3 ชุด</span></div>
+                </div>
+
+                <!-- === หมวดงานทาสี === -->
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="ปรับปรุง">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🪣</span><span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-medium">งานทาสี</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">สีทาลานกีฬาภายนอก TOA Sports Surface และ สีทาภายใน</h3>
+                        <p class="text-slate-500 text-xs mt-2">ต้องการสีขาว (3 ถัง), สีเขียว (3 ถัง), สีน้ำเงิน (3 ถัง), สีแดง (3 ถัง) และสีดำ (1 ถัง)</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนรวมที่ต้องใช้:</span><span class="font-bold text-slate-900">13 ถัง</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="ปรับปรุง">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🖌️</span><span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-medium">งานทาสี</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">แปรงทาสี / ลูกกลิ้งทาสี (เล็ก, กลาง, ใหญ่)</h3>
+                        <p class="text-slate-500 text-xs mt-2">พร้อมถาดลูกกลิ้งทาสี เพื่อให้ทีมอาสาลงพื้นที่ปรับปรุงสนามกีฬา</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">อย่างละ 20 ด้าม</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="ปรับปรุง">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🛠️</span><span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-medium">งานทาสี</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">แปรงลวดขัดสี / เกรียงขูดสี</h3>
+                        <p class="text-slate-500 text-xs mt-2">ใช้ในขั้นตอนเตรียมพื้นผิวผนังและสนาม ขูดลอกสีเดิมออก</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">แปรงลวด 10 / เกรียง 20 ด้าม</span></div>
+                </div>
+
+                <!-- === หมวดทำความสะอาดและปฐมพยาบาล === -->
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="ความสะอาด">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🧹</span><span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded font-medium">ความสะอาด</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ไม้กวาด / ที่ตักขยะ</h3>
+                        <p class="text-slate-500 text-xs mt-2">ไม้กวาดพื้น และที่ตักเศษขยะสำหรับใช้จัดการสุขาภิบาลโดยรอบ</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">อย่างละ 20 อัน/ด้าม</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="ความสะอาด">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🗑️</span><span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded font-medium">ความสะอาด</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ถังขยะแบบแยกประเภทขยะ</h3>
+                        <p class="text-slate-500 text-xs mt-2">ถังขยะแบ่งสีแยกประเภท เพื่อสุขอนามัยที่ดีของชุมชน</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">5 ชุด</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="ความสะอาด">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🩹</span><span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded font-medium">ปฐมพยาบาล</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">อุปกรณ์ปฐมพยาบาล ยาสามัญ</h3>
+                        <p class="text-slate-500 text-xs mt-2">ชุดทำแผล ยาประจำบ้าน พลาสเตอร์ และอุปกรณ์การพยาบาลเบื้องต้น</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-emerald-600">ไม่จำกัดจำนวน</span></div>
+                </div>
+
+                <!-- === หมวดเกษตรและอื่นๆ === -->
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="เกษตร">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🐔</span><span class="bg-rose-100 text-rose-800 text-xs px-2 py-0.5 rounded font-medium">เกษตรกรรม</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">อาหารสำหรับเลี้ยงไก่</h3>
+                        <p class="text-slate-500 text-xs mt-2">เพื่อใช้เกื้อหนุนฟาร์มเกษตรและโครงการอาหารกลางวันโรงเรียน</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-emerald-600">ไม่จำกัดจำนวน</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="เกษตร">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">⛺</span><span class="bg-rose-100 text-rose-800 text-xs px-2 py-0.5 rounded font-medium">วัสดุอื่นๆ</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">ผ้าใบพลาสติกบลูชีท (ยาว 50 ม.)</h3>
+                        <p class="text-slate-500 text-xs mt-2">ผ้าใบพลาสติกสีฟ้าขาวลายขวาง สำหรับปูกรองและใช้สอยในค่าย</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">1 ผืน</span></div>
+                </div>
+
+                <div class="item-card bg-white rounded-2xl border border-slate-150 p-6 flex flex-col justify-between hover:shadow-md transition" data-category="เกษตร">
+                    <div>
+                        <div class="flex justify-between items-start"><span class="text-3xl">🧼</span><span class="bg-rose-100 text-rose-800 text-xs px-2 py-0.5 rounded font-medium">ความสะอาด</span></div>
+                        <h3 class="font-bold text-slate-900 mt-4 text-base">น้ำยาทำความสะอาดอเนกประสงค์</h3>
+                        <p class="text-slate-500 text-xs mt-2">น้ำยาทำความสะอาดขนาดใหญ่ถังละ 5 ลิตร และแปรงขัดพื้นด้ามยาว (10 ด้าม)</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between text-sm"><span class="text-slate-400">จำนวนที่ต้องการ:</span><span class="font-bold text-slate-900">2 ขวด / แปรง 10 ด้าม</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-slate-200 mb-14">
+
+        <!-- Section 2: ช่องทางการรับบริจาค -->
+        <section class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-8">📍 ช่องทางการรับบริจาคสิ่งของ</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- ทางเลือก 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-xl text-indigo-600 font-bold mb-4">🏫</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">1. นำมาบริจาคได้ด้วยตัวเอง</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            สามารถนำสิ่งของเดินทางเข้ามาส่งมอบให้โดยตรงได้ที่หอพักสุรบุตร โรงเรียนสุรวิวัฒน์ฯ
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs text-slate-600">
+                        <p class="font-semibold text-slate-900 mb-1">ติดต่อผู้ประสานงานหลัก:</p>
+                        <p>คุณอภิชา (ครูตั้ม หัวหน้างานหอพัก)</p>
+                        <p class="mt-1">📞 <span class="font-semibold text-indigo-600">064-9693254</span> หรือ <span class="font-semibold text-indigo-600">044-225184</span></p>
+                    </div>
+                </div>
+
+                <!-- ทางเลือก 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-xl text-indigo-600 font-bold mb-4">📦</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">2. ส่งทางไปรษณีย์ / ขนส่งพัสดุ</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            ส่งพัสดุผ่านทางไปรษณีย์หรือเอกชนอื่นๆ โดยสามารถจ่าหน้ากล่องพัสดุตามรายละเอียดด้านล่าง
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs text-slate-700">
+                        <p class="font-semibold text-slate-900 mb-1">ข้อความจ่าหน้ากล่องพัสดุ:</p>
+                        <blockquote class="border-l-2 border-indigo-500 pl-2 text-slate-700 font-mono space-y-1">
+                            บริจาคสิ่งของร่วมกิจกรรม SWS Volunteers <br>
+                            หอพักสุรบุตร โรงเรียนสุรวิวัฒน์ฯ เลขที่ 111 <br>
+                            ถ.มหาวิทยาลัย ต.สุรนารี อ.เมือง จ.นครราชสีมา 30000
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนข้อมูลติดต่อสอบถามเพิ่มเติม -->
+            <div class="bg-gradient-to-r from-indigo-50 via-indigo-100/40 to-slate-50 border border-indigo-100 p-6 rounded-2xl mt-8 text-center shadow-sm">
+                <h4 class="font-bold text-slate-900 text-lg mb-2">📞 สอบถามรายละเอียดเพิ่มเติมได้ที่</h4>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                    <p><strong>ครูปาริชาต ชมชื่น (ครูจ๋า):</strong> <span class="text-indigo-600 font-semibold">088-3253860</span></p>
+                    <p class="hidden md:inline text-slate-300">|</p>
+                    <p><strong>ครูอภิชา สมจิต (ครูตั้ม):</strong> <span class="text-indigo-600 font-semibold">064-9693254</span> หรือ <span class="text-indigo-600 font-semibold">044-225184</span></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-16 border-t border-slate-800 text-center text-sm">
+        <p class="mb-2">โครงการ SWS Volunteers VOL.4 — โรงเรียนสุรวิวัฒน์ มหาวิทยาลัยเทคโนโลยีสุรนารี</p>
+        <p class="text-xs text-slate-500">© 2026 SWS Volunteers. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript For Category Filtering System -->
+    <script>
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.item-card');
+            const buttons = document.querySelectorAll('.category-btn');
+
+            // เปลี่ยนแท็บสีของปุ่มที่เลือกงาน
+            buttons.forEach(btn => {
+                if (btn.innerText.includes(category) || (category === 'all' && btn.innerText === 'ทั้งหมด')) {
+                    btn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200', 'hover:bg-indigo-50');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200', 'hover:bg-indigo-50');
+                }
+            });
+
+            // คัดแยกการแสดงผลของการ์ดสิ่งของ
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
